@@ -1,0 +1,235 @@
+.header {
+  min-height: 3.75rem;
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: $mobile) {
+    position: relative;
+  }
+
+  @media screen and (min-width: calc($tablet - 0.05px)) {
+    min-height: 5rem;
+  }
+}
+
+.header__wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.page-logo {
+  font-family: $secondary;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.03em;
+
+  & > span {
+    color: $text-accent;
+  }
+
+  @media screen and (min-width: $pc) {
+    font-size: 1.625rem;
+    line-height: 1.9375rem;
+  }
+}
+.menu__btn {
+  margin-left: auto;
+  z-index: 999;
+
+  @media screen and (min-width: calc($tablet - 0.05px)) {
+    display: none;
+  }
+}
+
+.header__menu {
+  @media screen and (max-width: calc($tablet - 0.05px)) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: $main-bg;
+
+    transform: translateX(-100%);
+    transition: transform $main-trn;
+
+    &.menu-open {
+      transform: translateX(0);
+    }
+  }
+
+  @media screen and (min-width: calc($tablet - 0.05px)) {
+    margin-left: 5.625rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+// .header__nav {
+// }
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @media screen and (min-width: calc($tablet - 0.05px)) {
+    flex-direction: row;
+    gap: 3.125rem;
+  }
+}
+// .nav__item {
+// }
+.nav__link {
+  display: block;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 2.9375rem;
+  letter-spacing: 0.02em;
+
+  transition: color $main-trn;
+
+  &.active {
+    color: $text-accent;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: ' ';
+      width: 100%;
+      height: 0.125rem;
+      background-color: $btn-bg;
+      border-radius: 0.625rem;
+    }
+  }
+
+  // &:hover {
+  //   color: $text-accent;
+  // }
+
+  &:hover:not(.active),
+  &:focus-visible:not(.active) {
+    color: $text-accent;
+  }
+
+  @media screen and (min-width: calc($tablet - 0.05px)) {
+    position: relative;
+    padding: 1.9375rem 0;
+
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+}
+
+.header__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @media screen and (max-width: calc($tablet - 0.05px)) {
+    margin-bottom: 4rem;
+  }
+
+  @media screen and (min-width: calc($tablet - 0.05px)) {
+    flex-direction: column-reverse;
+    gap: 0.625rem;
+  }
+
+  @media screen and (min-width: calc($pc - 0.05px)) {
+    flex-direction: row-reverse;
+    gap: 2.5rem;
+  }
+}
+
+.contacts__link {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: $sec-text;
+
+  transition: color $main-trn;
+
+  &:hover {
+    color: $text-accent;
+  }
+
+  @media screen and (min-width: calc($tablet - 0.05px)) {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+  }
+}
+
+.tel__link {
+  font-size: 2rem;
+  line-height: 2.5rem;
+
+  @media screen and (min-width: calc($tablet - 0.05px)) {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+  }
+}
+
+.mail__link {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+
+  @media screen and (min-width: calc($tablet - 0.05px)) {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+  }
+}
+
+.contacts__link-icon {
+  display: flex;
+  width: 0.75rem;
+  height: 0.625rem;
+
+  & use {
+    fill: currentColor;
+  }
+
+  @media screen and (max-width: calc($tablet - 0.05px)) {
+    display: none;
+  }
+}
+
+.social {
+  display: flex;
+
+  @media screen and (min-width: calc($tablet - 0.05px)) {
+    display: none;
+  }
+}
+
+.social__item {
+  &:not(:last-child) {
+    padding-right: 0.5rem;
+    border-right: 0.0625rem solid rgba(33, 33, 33, 0.2);
+  }
+
+  &:not(:first-child) {
+    padding-left: 0.5rem;
+  }
+}
+.social__link {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  letter-spacing: 0.02em;
+
+  color: $text-accent;
+}
