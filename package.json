@@ -7,6 +7,10 @@
     "start": "parcel src/*.html --port 1406 --open",
     "build": "parcel build src/*.html --public-url /web-studio/"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yevhen-yakymenko/web-studio.git"
+  },
   "dependencies": {
     "modern-normalize": "^1.1.0"
   },
