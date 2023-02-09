@@ -1,18 +1,35 @@
 (() => {
   const headerMenu = document.querySelector('.js-menu-container');
   const menuBtn = document.querySelector('.js-toggle-btn');
+  const navLinks = document.querySelectorAll('.nav__link');
 
-  const toggleMenu = () => {
+  const toggleMenu = e => {
     const isMenuOpen =
       menuBtn.getAttribute('aria-expanded') === 'true' || false;
     menuBtn.setAttribute('aria-expanded', !isMenuOpen);
+
     headerMenu.classList.toggle('menu-open');
+    menuBtn.classList.toggle('active');
 
     const scrollLockMethod = !isMenuOpen
       ? 'disableBodyScroll'
       : 'enableBodyScroll';
     bodyScrollLock[scrollLockMethod](document.body);
   };
+
+  const onMenuClick = e => {
+    if (menuBtn.classList.contains('active')) {
+      headerMenu.classList.remove('menu-open');
+      menuBtn.classList.remove('active');
+    }
+
+    console.log(e.target);
+    console.log(e.currentTarget);
+
+    // e.preventDefault();
+  };
+
+  navLinks.forEach(navLink => navLink.addEventListener('click', onMenuClick));
 
   menuBtn.addEventListener('click', toggleMenu);
 

@@ -35,9 +35,80 @@
     line-height: 1.9375rem;
   }
 }
+
 .menu__btn {
   margin-left: auto;
+  padding: 12px 8px;
+
+  background: none;
+  color: currentColor;
+  border: none;
+  cursor: pointer;
   z-index: 999;
+}
+
+.btn__icon {
+  display: block;
+  position: relative;
+
+  width: 24px;
+  height: 16px;
+
+  transition: all $main-trn;
+
+  & > span,
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 10%;
+
+    background-color: currentColor;
+
+    transition: transform $main-trn;
+  }
+
+  &::before,
+  &::after {
+    content: ' ';
+  }
+
+  & > span {
+    top: 50%;
+    transform: scale(1) translateY(-50%);
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &:hover {
+    color: $text-accent;
+  }
+
+  .menu__btn.active & > span {
+    transform-origin: left;
+    transform: scale(0);
+  }
+
+  .menu__btn.active &::before {
+    transform-origin: top left;
+    transform: rotate(38deg);
+    // top: 50%;
+    // transform: rotate(45deg) translate(0px, -50%);
+  }
+
+  .menu__btn.active &::after {
+    transform-origin: bottom left;
+    transform: rotate(-38deg);
+    // bottom: 50%;
+    // transform: rotate(-45deg) translate(0px, 50%);
+  }
 
   @media screen and (min-width: calc($tablet - 0.05px)) {
     display: none;
@@ -51,12 +122,14 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 3rem 1rem;
+    padding: 3rem 1rem 4rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 2.5rem;
 
     background-color: $main-bg;
+    overflow: auto;
 
     transform: translateX(-100%);
     transition: transform $main-trn;
@@ -79,6 +152,7 @@
 .nav__list {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 2rem;
 
   @media screen and (min-width: calc($tablet - 0.05px)) {
@@ -102,15 +176,17 @@
   &.active {
     color: $text-accent;
 
-    &::after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      content: ' ';
-      width: 100%;
-      height: 0.125rem;
-      background-color: $btn-bg;
-      border-radius: 0.625rem;
+    @media screen and (min-width: calc($tablet - 0.05px)) {
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: ' ';
+        width: 100%;
+        height: 0.125rem;
+        background-color: $btn-bg;
+        border-radius: 0.625rem;
+      }
     }
   }
 
