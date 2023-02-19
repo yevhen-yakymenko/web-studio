@@ -1,0 +1,89 @@
+<div class="modal modal-close js-modal">
+  <div class="modal__body">
+    <button
+      class="modal__btn-close js-btn-close"
+      aria-label="close the feedback form"
+    >
+      <svg class="btn-icon">
+        <use href="./images/sprite.svg#icon-close" />
+      </svg>
+    </button>
+    <form class="modal__form js-form">
+      <h2 class="form__title">
+        Leave your details<br />
+        and we will call you back
+      </h2>
+      <label class="form__field">
+        <input
+          type="text"
+          name="name"
+          required
+          autocomplete="off"
+          placeholder=" "
+          class="form__input"
+        />
+        <span class="form__label">Name</span>
+        <span class="input-icon">
+          <svg width="18" height="18">
+            <use href="./images/sprite.svg#icon-person" />
+          </svg>
+        </span>
+      </label>
+
+      <label class="form__field">
+        <input
+          type="tel"
+          name="number"
+          required
+          autocomplete="off"
+          placeholder=" "
+          class="form__input"
+        />
+        <span class="form__label">Phone</span>
+        <span class="input-icon">
+          <svg width="18" height="18">
+            <use href="./images/sprite.svg#icon-phone" />
+          </svg>
+        </span>
+      </label>
+
+      <label class="form__field">
+        <input
+          type="email"
+          name="email"
+          required
+          autocomplete="off"
+          placeholder=" "
+          class="form__input"
+        />
+        <span class="form__label">Email</span>
+        <span class="input-icon">
+          <svg width="18" height="18">
+            <use href="./images/sprite.svg#icon-email" />
+          </svg>
+        </span>
+      </label>
+
+      <label class="form__field">
+        <textarea
+          name="comment"
+          class="form__textarea"
+          placeholder=" "
+        ></textarea>
+        <span class="form__label textarea__label">Comment</span>
+      </label>
+
+      <label class="form__field-check">
+        <input type="checkbox" name="agreement" class="form__input-check" />
+        <span class="form__icon-check"></span>
+        <span class="form__label-check"
+          >I agree with the mailing and accept the
+          <a href="#" target="_blank" class="form__agreement-link"
+            >Terms of the Agreement</a
+          ></span
+        >
+      </label>
+      <button class="form__btn" type="submit">Send</button>
+    </form>
+  </div>
+</div>

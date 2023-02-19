@@ -1,0 +1,117 @@
+.hero {
+  margin: 0 auto;
+  max-width: 100rem;
+  height: 25rem;
+
+  background-color: #2f303a;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/hero/hero-mobile.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/hero/hero-mobile@2x.jpg');
+  }
+
+  @media screen and (min-width: $mobile) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/hero/hero-tablet.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../images/hero/hero-tablet@2x.jpg');
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/hero/hero-pc.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../images/hero/hero-pc@2x.jpg');
+    }
+  }
+
+  @media screen and (min-width: $pc) {
+    height: 37.5rem;
+  }
+}
+
+.hero__wrapper {
+  height: 100%;
+}
+
+.hero__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.875rem;
+
+  color: $white-text;
+}
+
+.hero__title {
+  font-weight: 900;
+  font-size: 1.625rem;
+  line-height: 161.538462%; /* 42/26 */
+
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: inherit;
+
+  @media screen and (min-width: $pc) {
+    font-size: 2.75rem;
+    line-height: 136.363636%; /* 60/44 */
+  }
+}
+
+.hero__btn {
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0.625rem 1.5625rem;
+
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 187.5%; /* 30/16 */
+  letter-spacing: 0.06em;
+  color: inherit;
+  text-transform: uppercase;
+
+  background: #2196f3;
+  box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.15);
+
+  border: none;
+  border-radius: 0.25rem;
+
+  cursor: pointer;
+}
