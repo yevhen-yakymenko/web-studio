@@ -235,12 +235,18 @@
   border: 0.125rem solid $main-text;
   border-radius: 0.125rem;
 
+  transition: color $main-trn;
+
   .form__input-check:checked + & {
     background-size: contain;
     background-repeat: no-repeat;
     background-origin: border-box;
     background-image: url(../images/icon-check.svg);
     border-color: transparent;
+  }
+
+  .form__input-check:focus-within + & {
+    border-color: $text-accent;
   }
 }
 

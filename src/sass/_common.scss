@@ -51,6 +51,14 @@ img {
   height: auto;
 }
 
+.section {
+  padding: 3.75rem 0;
+
+  @media screen and (min-width: $pc) {
+    padding: 5.875rem 0;
+  }
+}
+
 .container {
   margin: 0 auto;
   padding-left: 0.9375rem;
