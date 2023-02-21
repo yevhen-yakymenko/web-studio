@@ -60,7 +60,7 @@
       console.log(`${name}: ${value}`)
     );
 
-    modal.classList.remove('modal-open');
+    modal.classList.add('modal-close');
 
     e.currentTarget.reset();
   });
