@@ -81,11 +81,14 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 114.285714%; /* 16/14 */
-  text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
   color: $white-text;
+
+  @media screen and (max-width: calc($pc - 0.0375rem)) {
+    text-align: center;
+  }
 }
 
 .social-title {
