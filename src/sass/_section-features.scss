@@ -16,7 +16,7 @@
   @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 1.875rem;
   }
 
   @media screen and (min-width: $pc) {
@@ -27,35 +27,35 @@
 
   @media screen and (max-width: calc($tablet - 0.0375rem)) {
     &:not(:last-child) {
-      margin-bottom: 30px;
+      margin-bottom: 1.875rem;
     }
   }
 
   @media screen and (min-width: $tablet) {
-    flex-basis: calc((100% - 30px) / 2);
+    flex-basis: calc((100% - 1.875rem) / 2);
   }
 
   @media screen and (min-width: $pc) {
-    flex-basis: calc((100% - 90px) / 4);
+    flex-basis: calc((100% - 5.625rem) / 4);
   }
 }
 .feature {
 }
 .feature__img-box {
-  margin-bottom: 30px;
-  height: 120px;
+  margin-bottom: 1.875rem;
+  height: 7.5rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   background: $sec-bg;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 .feature__icon {
 }
 .feature__title {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   font-weight: 700;
   font-size: 0.875rem;
   line-height: 114.285714%; /* 16/14 */

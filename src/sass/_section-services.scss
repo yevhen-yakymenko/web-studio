@@ -1,22 +1,21 @@
 .services {
-  padding-top: 0px;
-  @media screen and (max-width: calc($pc - 0.6px)) {
+  padding-top: 0rem;
+  @media screen and (max-width: calc($pc - 0.0375rem)) {
     display: none;
   }
 }
 .services__wrapper {
 }
 .services__title {
-  margin-bottom: 50px;
 }
 
 .services__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 1.875rem;
 }
 .services__item {
-  flex-basis: calc((100% - 60px) / 3);
+  flex-basis: calc((100% - 3.75rem) / 3);
 }
 .service__box {
   position: relative;
@@ -34,7 +33,7 @@
 }
 .service__text {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 114.285714%; /* 16/14 */
   text-align: center;
   letter-spacing: 0.03em;

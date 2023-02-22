@@ -1,0 +1,46 @@
+.clients {
+}
+.clients__wrapper {
+}
+.clients__title {
+}
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.875rem;
+}
+.clietns__item {
+  flex-basis: calc((100% - 1.875rem) / 2);
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 3.75rem) / 3);
+  }
+
+  @media screen and (min-width: $pc) {
+    flex-basis: calc((100% - 9.375rem) / 6);
+  }
+}
+
+.item__social-link {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+
+  color: $soc-icon;
+
+  border: 0.0625rem solid $soc-icon;
+  border-radius: 0.25rem;
+
+  transition: color $main-trn, border-color $main-trn;
+
+  &:hover,
+  &:focus {
+    color: $text-accent;
+    border-color: $btn-bg;
+  }
+
+  & svg {
+    fill: currentColor;
+  }
+}

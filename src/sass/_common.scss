@@ -67,8 +67,74 @@ img {
 }
 
 .title {
+  margin-bottom: 30px;
+
   font-size: 36px;
   line-height: 116.666667%; /* 42/36 */
   text-align: center;
   letter-spacing: 0.03em;
+
+  @media screen and (min-width: $pc) {
+    margin-bottom: 50px;
+  }
+}
+
+.main-btn {
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0.625rem 1.5625rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 187.5%; /* 30/16 */
+  letter-spacing: 0.06em;
+  color: $white-text;
+
+  background: $btn-bg;
+  box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.15);
+
+  border: none;
+  border-radius: 0.25rem;
+
+  cursor: pointer;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social-item {
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.75rem;
+  height: 2.75rem;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transition: color $main-trn, background-color $main-trn;
+
+  &:hover,
+  &:focus {
+    color: $white-text;
+    background-color: $text-accent;
+  }
+
+  & svg {
+    fill: currentColor;
+  }
 }

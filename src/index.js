@@ -1,5 +1,6 @@
 (() => {
   // Mobile menu control
+
   const headerMenu = document.querySelector('.js-menu-container');
   const menuBtn = document.querySelector('.js-toggle-btn');
   const navLinks = document.querySelectorAll('.nav__link');
@@ -35,6 +36,7 @@
   menuBtn.addEventListener('click', toggleMenu);
 
   // Modal and form control
+
   const modal = document.querySelector('.js-modal');
   const openFormBtn = document.querySelector('.js-btn-form');
   const modalForm = document.querySelector('.js-form');
@@ -61,6 +63,20 @@
     );
 
     modal.classList.add('modal-close');
+
+    e.currentTarget.reset();
+  });
+
+  // Subscribe form control
+
+  const subForm = document.querySelector('.js-sub-form');
+
+  subForm.addEventListener('submit', e => {
+    e.preventDefault();
+
+    new FormData(e.currentTarget).forEach((value, name) =>
+      console.log(`${name}: ${value}`)
+    );
 
     e.currentTarget.reset();
   });
