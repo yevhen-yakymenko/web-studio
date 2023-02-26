@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,12 +23,12 @@
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="./index.js"></script>
+    <script type="module" src="./contacts.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="header__wrapper container">
-        <a href="#" class="page-logo"><span>Web</span>Studio</a>
+        <a href="./index.html" class="page-logo"><span>Web</span>Studio</a>
         <button
           type="button"
           class="menu__btn js-toggle-btn"
@@ -116,8 +116,89 @@
     </header>
 
     <main>
-      <section class="contacts">
-        <div class="contacts__wrapper container">contacts</div>
+      <section class="contacts section">
+        <div class="contacts__wrapper container">
+          <div class="contacts__box">
+            <h1 class="contacts__title">Contacts</h1>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <svg
+                  width="72"
+                  height="48"
+                  viewBox="0 0 72 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <mask
+                    id="mask0_4907_24156"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="72"
+                    height="48"
+                  >
+                    <rect width="72" height="48" rx="8" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_4907_24156)">
+                    <rect width="72" height="24" fill="#005BBB" />
+                    <rect y="24" width="72" height="24" fill="#FFD500" />
+                  </g>
+                </svg>
+              </li>
+              <li class="contacts__item">
+                <p class="contacts__address">
+                  26 Lesi Ukrainky Ave, Kyiv, Ukraine
+                </p>
+              </li>
+              <li class="contacts__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="contacts__link mail-link"
+                >
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a href="tel:+38 096 111 11 11" class="contacts__link tel-link">
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div id="wrapper-webstudio" class="contacts__map-box">
+            <div id="map-webstudio" class="contacts__map"></div>
+            <script>
+              (function () {
+                var setting = {
+                  height: 400,
+                  width: 520,
+                  zoom: 13,
+                  queryString: 'Lesi Ukrainky Boulevard, 26, Kyiv, Ukraine',
+                  place_id: 'ChIJ6cs-Aw7P1EARoH3H_v7fpFc',
+                  satellite: false,
+                  centerCoord: [50.424676954103155, 30.53602581401897],
+                  cid: '0x57a4dffefec77da0',
+                  lang: 'en',
+                  cityUrl: '/ukraine/kiev',
+                  cityAnchorText: 'Map of Kiev, Kiev Region, Ukraine',
+                  id: 'map-webstudio',
+                  embed_id: '887683',
+                };
+                var d = document;
+                var s = d.createElement('script');
+                s.src =
+                  'https://1map.com/js/script-for-user.js?embed_id=887683';
+                s.async = true;
+                s.onload = function (e) {
+                  window.OneMap.initMap(setting);
+                };
+                var to = d.getElementsByTagName('script')[0];
+                to.parentNode.insertBefore(s, to);
+              })();
+            </script>
+          </div>
+        </div>
       </section>
     </main>
 

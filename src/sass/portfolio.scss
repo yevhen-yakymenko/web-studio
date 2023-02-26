@@ -37,14 +37,16 @@
 
   background: $sec-bg;
   border-radius: 0.25rem;
-  border: 0.0625rem solid transparent;
+  border: none;
 
   cursor: pointer;
 
-  transition: border-color $main-trn;
+  transition: color $main-trn;
 
-  &:not(&.active-filter):hover {
-    border-color: $btn-bg;
+  &:not(&.active-filter):hover,
+  &:not(&.active-filter):focus {
+    color: $text-accent;
+    outline-color: $text-accent;
   }
 
   &.active-filter {

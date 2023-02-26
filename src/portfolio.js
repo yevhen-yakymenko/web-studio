@@ -30,38 +30,6 @@
 
   menuBtn.addEventListener('click', toggleMenu);
 
-  // Modal and form control
-
-  const modal = document.querySelector('.js-modal');
-  const openFormBtn = document.querySelector('.js-btn-form');
-  const modalForm = document.querySelector('.js-form');
-  const closeModalBtn = document.querySelector('.js-btn-close');
-
-  openFormBtn.addEventListener('click', () => {
-    modal.classList.remove('modal-close');
-    document.body.classList.add('modal-open');
-  });
-
-  modal.addEventListener('click', e => {
-    if (e.target === e.currentTarget || e.target === closeModalBtn) {
-      modal.classList.add('modal-close');
-      document.body.classList.remove('modal-open');
-      modalForm.reset();
-    }
-  });
-
-  modalForm.addEventListener('submit', e => {
-    e.preventDefault();
-
-    new FormData(e.currentTarget).forEach((value, name) =>
-      console.log(`${name}: ${value}`)
-    );
-
-    modal.classList.add('modal-close');
-
-    e.currentTarget.reset();
-  });
-
   // Subscribe form control
 
   const subForm = document.querySelector('.js-sub-form');
@@ -83,22 +51,4 @@
     menuBtn.setAttribute('aria-expanded', false);
     bodyScrollLock.enableBodyScroll(document.body);
   });
-
-  // Initialize and add the map
-  function initMap() {
-    // The location of Uluru
-    const uluru = { lat: -25.344, lng: 131.031 };
-    // The map, centered at Uluru
-    const map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 4,
-      center: uluru,
-    });
-    // The marker, positioned at Uluru
-    const marker = new google.maps.Marker({
-      position: uluru,
-      map: map,
-    });
-  }
-
-  window.initMap = initMap;
 })();

@@ -126,6 +126,7 @@
 
     background-color: $main-bg;
     overflow: auto;
+    z-index: 10;
 
     transform: translateX(-100%);
     transition: transform $main-trn;
