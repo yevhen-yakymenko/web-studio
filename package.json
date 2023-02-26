@@ -5,7 +5,7 @@
   "homepage": "https://yevhen-yakymenko.github.io/web-studio",
   "scripts": {
     "start": "parcel src/*.html --port 1406 --open",
-    "build": "parcel build src/*.html"
+    "build": "parcel build src/*.html --public-url /web-studio/"
   },
   "repository": {
     "type": "git",
