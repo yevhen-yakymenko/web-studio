@@ -7,6 +7,8 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   height: 100%;
   font-family: $primary;
@@ -21,7 +23,7 @@ body {
 
 main {
   flex: 1 1 100%;
-  display: flex;
+  // display: flex;
 }
 
 a {
@@ -49,6 +51,17 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .section {

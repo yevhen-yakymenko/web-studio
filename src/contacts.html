@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper container">
+        <a href="#" class="page-logo"><span>Web</span>Studio</a>
+        <button
+          type="button"
+          class="menu__btn js-toggle-btn"
+          aria-label="open the mobile menu"
+          aria-expanded="false"
+          aria-controls="header__menu"
+        >
+          <span class="btn__icon">
+            <span></span>
+          </span>
+        </button>
+        <div class="header__menu js-menu-container" id="header__menu">
+          <nav class="header__nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="./index.html" class="nav__link">Studio</a>
+              </li>
+              <li class="nav__item">
+                <a href="./portfolio.html" class="nav__link">Portfolio</a>
+              </li>
+              <li class="nav__item">
+                <a href="./contacts.html" class="nav__link active">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <div class="header__contacts">
+              <a href="tel:+38 096 111 11 11" class="contacts__link tel__link">
+                <span>
+                  <svg class="contacts__link-icon">
+                    <use href="./images/sprite.svg#icon-smartphone" />
+                  </svg>
+                </span>
+                +38 096 111 11 11
+              </a>
+              <a
+                href="mailto:info@devstudio.com"
+                class="contacts__link mail__link"
+              >
+                <span>
+                  <svg class="contacts__link-icon">
+                    <use href="./images/sprite.svg#icon-envelope" />
+                  </svg>
+                </span>
+                info@devstudio.com
+              </a>
+            </div>
+            <ul class="social">
+              <li class="social__item">
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  class="social__link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="social__item">
+                <a
+                  href="https://twitter.com/"
+                  target="_blank"
+                  class="social__link"
+                  >Twitter</a
+                >
+              </li>
+              <li class="social__item">
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  class="social__link"
+                  >Facebook</a
+                >
+              </li>
+              <li class="social__item">
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  class="social__link"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="contacts">
+        <div class="contacts__wrapper container">contacts</div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <include src="./partials/footer.html"></include>
+  </body>
+</html>
