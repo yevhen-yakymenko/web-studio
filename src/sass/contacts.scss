@@ -47,6 +47,9 @@
 }
 
 .contacts__map-box {
+  flex-basis: 520px;
+  height: 400px;
+
   @media screen and (max-width: calc($pc - 0.6px)) {
     margin: 0 auto;
   }
